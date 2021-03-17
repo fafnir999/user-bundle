@@ -1,5 +1,5 @@
 {
-    "name": "msgphp/user-bundle",
+    "name": "fafnir999/user-bundle",
     "type": "symfony-bundle",
     "description": "Basic user management (the `User` domain)",
     "keywords": [
