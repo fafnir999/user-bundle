@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "fafnir999/user": "0.15.1.3",
+        "fafnir999/user": "0.16.0",
         "symfony/config": "^3.4 || ^4.4 || ^5.0",
         "symfony/dependency-injection": "^3.4 || ^4.4 || ^5.0",
         "symfony/http-kernel": "^3.4 || ^4.4 || ^5.0"
