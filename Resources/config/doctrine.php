@@ -7,7 +7,7 @@ use Doctrine\ORM\Events as DoctrineOrmEvents;
 use MsgPhp\User\Infrastructure\Doctrine;
 use MsgPhp\UserBundle\DependencyInjection\Configuration;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 
 return static function (ContainerConfigurator $container): void {
     $services = $container->services()
@@ -15,7 +15,7 @@ return static function (ContainerConfigurator $container): void {
             ->autowire()
             ->autoconfigure()
             ->private()
-            ->bind(EntityManagerInterface::class, ref('msgphp.doctrine.entity_manager'))
+            ->bind(EntityManagerInterface::class, service('msgphp.doctrine.entity_manager'))
 
         ->set(Doctrine\UsernameLookup::class)
 

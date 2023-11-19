@@ -262,6 +262,7 @@ final class Configuration implements ConfigurationInterface
                     throw new \LogicException('Mapping the "'.Username::class.'" entity under "class_mapping" requires "username_lookup" to be configured.');
                 }
 
+                $config['commands'] = $config['commands'] ?? [];
                 ConfigHelper::resolveCommandMappingConfig(self::COMMAND_MAPPING, $config['class_mapping'], $config['commands']);
 
                 return $config;

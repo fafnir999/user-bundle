@@ -6,7 +6,7 @@ use Lexik\Bundle\JWTAuthenticationBundle\Security\User\PayloadAwareUserProviderI
 use MsgPhp\User\Infrastructure\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\ref;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\service;
 use Symfony\Component\Security\Core\Encoder\PasswordEncoderInterface;
 
 return static function (ContainerConfigurator $container): void {
@@ -16,7 +16,7 @@ return static function (ContainerConfigurator $container): void {
             ->private()
 
         ->set(PasswordEncoderInterface::class)
-            ->factory([ref('security.encoder_factory'), 'getEncoder'])
+            ->factory([service('security.encoder_factory'), 'getEncoder'])
             ->args([Security\UserIdentity::class])
 
         ->set(Security\UserIdentityProvider::class)
