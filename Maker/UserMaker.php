@@ -67,6 +67,11 @@ final class UserMaker implements MakerInterface
         return 'make:user:msgphp';
     }
 
+    public static function getCommandDescription(): string
+    {
+        return 'User maker';
+    }
+
     public function configureCommand(Command $command, InputConfiguration $inputConfig): void
     {
         $command
