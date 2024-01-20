@@ -115,12 +115,12 @@ final class Extension extends BaseExtension implements PrependExtensionInterface
 
     public function process(ContainerBuilder $container): void
     {
-        if (FeatureDetection::hasSecurityBundle($container) && $container->hasDefinition($id = 'data_collector.security')) {
-            $container->getDefinition($id)
-                ->setClass(SecurityInfrastructure\DataCollector::class)
-                ->setArgument('$repository', new Reference(Repository\UserRepository::class, ContainerBuilder::NULL_ON_INVALID_REFERENCE))
-            ;
-        }
+//        if (FeatureDetection::hasSecurityBundle($container) && $container->hasDefinition($id = 'data_collector.security')) {
+//            $container->getDefinition($id)
+//                ->setClass(SecurityInfrastructure\DataCollector::class)
+//                ->setArgument('$repository', new Reference(Repository\UserRepository::class, ContainerBuilder::NULL_ON_INVALID_REFERENCE))
+//            ;
+//        }
     }
 
     private function loadDoctrineOrm(array $config, LoaderInterface $loader, ContainerBuilder $container): void
