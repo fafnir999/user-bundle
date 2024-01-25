@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace MsgPhp\UserBundle\Twig;
 
-use MsgPhp\User\Infrastructure\Security\UserIdentity;
+use Fafnir999\UserBundle\Infrastructure\Security\UserIdentity;
 use MsgPhp\User\Repository\UserRepository;
 use MsgPhp\User\User;
 use MsgPhp\User\UserId;
